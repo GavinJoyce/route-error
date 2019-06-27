@@ -7,6 +7,13 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('apps', function() {
+    this.route('app', function() {
+      this.route('inbox', function() {
+        this.route('conversation');
+      });
+    });
+  });
 });
 
 export default Router;
