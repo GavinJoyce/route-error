@@ -1,3 +1,9 @@
 <h2>apps.app</h2>
 
-{{outlet}}
+hasBooted:{{bootService.hasBooted}}
+
+{{#if bootService.showBootError}} 
+  <h1 style="color: red">Boot Error!</h1>
+{{else}}
+  {{outlet}}
+{{/if}}
